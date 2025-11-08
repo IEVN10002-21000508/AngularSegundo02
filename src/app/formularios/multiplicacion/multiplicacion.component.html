@@ -1,0 +1,62 @@
+<div class="max-w-md mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+  <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">Cálculo de Distancia</h2>
+
+  <form [formGroup]="distanciaForm" (ngSubmit)="calcular()">
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div>
+        <label for="x1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">X1</label>
+        <input
+          type="number"
+          id="x1"
+          formControlName="x1"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Coordenada X1"
+        />
+      </div>
+
+      <div>
+        <label for="y1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Y1</label>
+        <input
+          type="number"
+          id="y1"
+          formControlName="y1"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Coordenada Y1"
+        />
+      </div>
+
+      <div>
+        <label for="x2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">X2</label>
+        <input
+          type="number"
+          id="x2"
+          formControlName="x2"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Coordenada X2"
+        />
+      </div>
+
+      <div>
+        <label for="y2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Y2</label>
+        <input
+          type="number"
+          id="y2"
+          formControlName="y2"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Coordenada Y2"
+        />
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      Calcular Distancia
+    </button>
+  </form>
+
+  <h3 class="mt-6 text-lg font-semibold text-gray-900 dark:text-white text-center">
+    Resultado: <span class="font-normal">{{ resultado }}</span>
+  </h3>
+</div>
